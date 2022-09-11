@@ -4,11 +4,11 @@
         {
             int money;
             string name;
-            float yourWallet;
+            float playerWallet;
             bool canSell;
             uint vision;
             byte damange;
-            double money2;
+            double walletSalesman;
             long armour;
             char letterD;
             ushort temperature;
