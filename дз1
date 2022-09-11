@@ -8,7 +8,7 @@
             bool canSell;
             uint vision;
             byte damange;
-            double walletSalesman;
+            double moneySalesman;
             long armour;
             char letterD;
             ushort temperature;
