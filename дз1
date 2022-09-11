@@ -1,0 +1,17 @@
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int money;
+            string name;
+            float yourWallet;
+            bool canSell;
+            uint vision;
+            byte damange;
+            double money2;
+            long armour;
+            char letterD;
+            ushort temperature;
+        }
+    }
+}
