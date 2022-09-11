@@ -16,3 +16,6 @@
             whereWorking = Console.ReadLine();
 
             Console.WriteLine($"Вас зовут {name}, вам {age} лет, вы {zodiacSign} и работаете {whereWorking}.");
+        }
+    }
+}
