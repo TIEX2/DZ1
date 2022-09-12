@@ -1,0 +1,14 @@
+        static void Main(string[] args)
+        {
+            string name = "Vinogradov";
+            string surname = "Victor";
+
+            Console.WriteLine($"{name} {surname}");
+
+            string valueChange;
+            valueChange = name;
+            name = surname;
+            surname = valueChange;
+
+            Console.WriteLine($"{name} {surname}");
+        }
