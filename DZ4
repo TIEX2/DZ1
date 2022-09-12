@@ -1,0 +1,11 @@
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int RowPictures = 3;
+            int allPictures = 52;
+            int rows = allPictures / RowPictures;
+            int remainingPictures = allPictures % RowPictures;
+
+            Console.WriteLine($"Рядов заполнено - {rows}. Картинок осталось сверх меры - {remainingPictures}");
+        }
