@@ -2,10 +2,10 @@
     {
         static void Main(string[] args)
         {
-            int RowPictures = 3;
+            int picturesInRow = 3;
             int allPictures = 52;
-            int rows = allPictures / RowPictures;
-            int remainingPictures = allPictures % RowPictures;
+            int rows = allPictures / picturesInRow;
+            int remainingPictures = allPictures % picturesInRow;
 
             Console.WriteLine($"Рядов заполнено - {rows}. Картинок осталось сверх меры - {remainingPictures}");
         }
