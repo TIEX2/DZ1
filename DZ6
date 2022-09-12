@@ -1,0 +1,14 @@
+        static void Main(string[] args)
+        {
+            int playerGold;
+            int crystalsGet;
+            int costCrystals = 4;
+            
+            Console.Write("Сколько у вас золота: ");
+            playerGold = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Сколько кристалов вы хотите: ");
+            crystalsGet = Convert.ToInt32(Console.ReadLine());
+
+            playerGold -= crystalsGet * costCrystals;
+
+            Console.WriteLine($"Вы получили {crystalsGet} кристалов, и у вас осталось {playerGold} золота");
