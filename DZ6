@@ -12,3 +12,4 @@
             playerGold -= crystalsGet * costCrystals;
 
             Console.WriteLine($"Вы получили {crystalsGet} кристалов, и у вас осталось {playerGold} золота");
+         }
