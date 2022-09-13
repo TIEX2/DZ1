@@ -1,0 +1,16 @@
+        static void Main(string[] args)
+        {
+            int manInLine;
+            int waitingTime;
+            int minutes;
+            int hours;
+            int timeVisit = 10;
+
+            Console.Write("Сколько человек в очереди: ");
+            manInLine = Convert.ToInt32(Console.ReadLine());
+            waitingTime = manInLine * timeVisit;
+            hours = waitingTime / 60;
+            minutes = waitingTime % 60;
+
+            Console.WriteLine($"Вы должны отстоять в очереди {hours} часа {minutes} минут.");
+        }
