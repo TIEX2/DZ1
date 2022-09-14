@@ -1,0 +1,22 @@
+        static void Main(string[] args)
+        {
+            int wheelSpin = 360;
+            string userInput;
+            string password = "Exit";
+
+            while (wheelSpin > 0)
+            {
+                Console.Write("Введите пароль, чтобы остановить колесо: ");
+                userInput = Console.ReadLine();
+
+                if (userInput == password)
+                {
+                    Console.WriteLine("Колесо остановилось!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Колесо крутится дальше!");
+                }
+            }
+        }
