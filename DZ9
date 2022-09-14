@@ -12,7 +12,6 @@
                 if (userInput == password)
                 {
                     Console.WriteLine("Колесо остановилось!");
-                    break;
                 }
                 else
                 {
