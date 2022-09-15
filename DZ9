@@ -1,10 +1,10 @@
         static void Main(string[] args)
         {
-            bool isWorking = false;
+            bool isWorking = true;
             string userInput;
             string password = "Exit";
 
-            while (isWorking == false)
+            while (isWorking == true)
             {
                 Console.Write("Введите пароль, чтобы остановить колесо: ");
                 userInput = Console.ReadLine();
@@ -12,12 +12,11 @@
                 if (userInput == password)
                 {
                     Console.WriteLine("Колесо остановилось!");
-                    isWorking = true;
+                    isWorking = false;
                 }
                 else
                 {
                     Console.WriteLine("Колесо крутится дальше!");
-                    isWorking = false; 
                 }
             }
         }
