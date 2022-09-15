@@ -14,9 +14,5 @@
                     Console.WriteLine("Колесо остановилось!");
                     isWorking = false;
                 }
-                else
-                {
-                    Console.WriteLine("Колесо крутится дальше!");
-                }
             }
         }
