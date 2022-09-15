@@ -1,0 +1,10 @@
+        static void Main(string[] args)
+        {
+            int finiteNumber = 96;
+            int addNumber = 7;
+
+            for (int initialNumber = 5; initialNumber <= finiteNumber; initialNumber += addNumber)
+            {
+                Console.WriteLine(initialNumber);
+            }
+        }
