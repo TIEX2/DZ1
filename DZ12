@@ -1,5 +1,12 @@
-        static void Main(string[] args)
+ static void Main(string[] args)
         {
+            const string CommandRubToUsd = "1";
+            const string CommandUsdToRub = "2";
+            const string CommandRubToEur = "3";
+            const string CommandEurToRub = "4";
+            const string CommandEurToUsd = "5";
+            const string CommandUsdToEur = "6";
+            const string CommandExit = "7";
             int rubToUsd = 60;
             int usdToRub = 63;
             int rubToEur = 60;
@@ -12,13 +19,6 @@
             float currenceCount;
             string userInput;
             bool isWorking = true;
-            const string CommandRubToUsd = "1";
-            const string CommandUsdToRub = "2";
-            const string CommandRubToEur = "3";
-            const string CommandEurToRub = "4";
-            const string CommandEurToUsd = "5";
-            const string CommandUsdToEur = "6";
-            const string CommandExit = "7";
 
             Console.WriteLine("Здравствуйте, вы в обменнике валют!");
             Console.Write("Сколько у вас рублей в кошельке? ");
@@ -30,13 +30,13 @@
 
             while (isWorking == true)
             {
-                Console.WriteLine("1 - обменять рубли на доллары");
-                Console.WriteLine("2 - обменять доллары на рубли");
-                Console.WriteLine("3 - обменять рубли на евро");
-                Console.WriteLine("4 - обменять евро на рубли");
-                Console.WriteLine("5 - обменять евро на доллары");
-                Console.WriteLine("6 - обменять доллары на евро");
-                Console.WriteLine("7 - выйти из программы");
+                Console.WriteLine($"{CommandRubToUsd} - обменять рубли на доллары");
+                Console.WriteLine($"{CommandUsdToRub} - обменять доллары на рубли");
+                Console.WriteLine($"{CommandRubToEur} - обменять рубли на евро");
+                Console.WriteLine($"{CommandEurToRub} - обменять евро на рубли");
+                Console.WriteLine($"{CommandEurToUsd} - обменять евро на доллары");
+                Console.WriteLine($"{CommandUsdToEur} - обменять доллары на евро");
+                Console.WriteLine($"{CommandExit} - выйти из программы");
                 Console.Write("Какое действие выполнить: ");
                 userInput = Console.ReadLine();
 
