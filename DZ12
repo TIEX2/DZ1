@@ -1,4 +1,4 @@
- static void Main(string[] args)
+        static void Main(string[] args)
         {
             const string CommandRubToUsd = "1";
             const string CommandUsdToRub = "2";
@@ -45,6 +45,7 @@
                     case CommandRubToUsd:
                         Console.WriteLine("Сколько рублей обменять на доллары?");
                         currenceCount = Convert.ToSingle(Console.ReadLine());
+                       
                         if (rubUser >= currenceCount)
                         {
                             rubUser -= currenceCount;
@@ -55,10 +56,12 @@
                         {
                             Console.WriteLine("Не хватает средств!");
                         }
+
                         break;
                     case CommandUsdToRub:
                         Console.WriteLine("Сколько долларов обменять на рубли?");
                         currenceCount = Convert.ToSingle(Console.ReadLine());
+                        
                         if (usdUser >= currenceCount)
                         {
                             usdUser -= currenceCount;
@@ -69,10 +72,12 @@
                         {
                             Console.WriteLine("Не хватает средств!");
                         }
+
                         break;
                     case CommandRubToEur:
                         Console.WriteLine("Сколько рублей обменять на евро?");
                         currenceCount = Convert.ToSingle(Console.ReadLine());
+                       
                         if (rubUser >= currenceCount)
                         {
                             rubUser -= currenceCount;
@@ -83,10 +88,12 @@
                         {
                             Console.WriteLine("Не хватает средств!");
                         }
+
                         break;
                     case CommandEurToRub:
                         Console.WriteLine("Сколько евро обменять на рубли?");
                         currenceCount = Convert.ToSingle(Console.ReadLine());
+                        
                         if (eurUser >= currenceCount)
                         {
                             eurUser -= currenceCount;
@@ -97,10 +104,12 @@
                         {
                             Console.WriteLine("Не хватает средств!");
                         }
+
                         break;
                     case CommandEurToUsd:
                         Console.WriteLine("Сколько евро обменять на доллары?");
                         currenceCount = Convert.ToSingle(Console.ReadLine());
+                       
                         if (eurUser >= currenceCount)
                         {
                             eurUser -= currenceCount;
@@ -111,10 +120,12 @@
                         {
                             Console.WriteLine("Не хватает средств!");
                         }
+
                         break;
                     case CommandUsdToEur:
                         Console.WriteLine("Сколько долларов обменять на евро?");
                         currenceCount = Convert.ToSingle(Console.ReadLine());
+                        
                         if (usdUser >= currenceCount)
                         {
                             usdUser -= currenceCount;
@@ -125,6 +136,7 @@
                         {
                             Console.WriteLine("Не хватает средств!");
                         }
+
                         break;
                     case CommandExit:
                         Console.WriteLine("Вы вышли из обменника!");
