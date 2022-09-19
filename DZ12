@@ -8,7 +8,7 @@
 
             Console.WriteLine("Здравствуйте, вы в обменнике валют!");
             Console.Write("Сколько у вас рублей в кошельке? ");
-            rubUser = Convert.ToInt32(Console.ReadLine());
+            rubUser = Convert.ToSingle(Console.ReadLine());
             Console.Write("Сколько у вас долларов в кошельке? ");
             usdUser = Convert.ToSingle(Console.ReadLine());
             Console.Write("Сколько у вас евро в кошельке? ");
