@@ -1,0 +1,77 @@
+        static void Main(string[] args)
+        {
+            const string commandMultiplication = "1";
+            const string commandPuzzle = "2";
+            const string commandRandomNumber = "3";
+            const string commandChangeColorText = "4";
+            const string commandExit = "5";
+            float numberToDivide;
+            float divider;
+            float result;
+            string userResponse;
+            string correctAnswer = "Молоко";
+            bool guessing = true;
+            int randomNumber;
+            int minValueRandom = 0;
+            int maxValueRandom = 1000;
+            string userInput;
+            bool isWorking = true;
+
+            while (isWorking == true)
+            {
+                Console.WriteLine($"{commandMultiplication} - разделить число.");
+                Console.WriteLine($"{commandPuzzle} - решите загадку и получите пароль.");
+                Console.WriteLine($"{commandRandomNumber} - вывести на экран рандомное число.");
+                Console.WriteLine($"{commandChangeColorText} - изменить цвет текста на синий.");
+                Console.WriteLine($"{commandExit} - выйти из программы.");
+                userInput = Console.ReadLine();
+
+                switch (userInput)
+                {
+                    case commandMultiplication:
+                        Console.Write("Введите число, которое хотите поделить: ");
+                        numberToDivide = Convert.ToSingle(Console.ReadLine());
+                        Console.Write("Введите делитель: ");
+                        divider = Convert.ToSingle(Console.ReadLine());
+                        result = numberToDivide / divider;
+                        Console.WriteLine($"При делинии {numberToDivide} на {divider} вы получите - {result}.");
+                        break;
+                    case commandPuzzle:
+                        
+                        while (guessing == true)
+                        {
+                            Console.Write("Жидкое, а не вода, белое, а не снег. Ответ: ");
+                            userResponse = Console.ReadLine();
+
+                            if (userResponse != correctAnswer)
+                            {
+                                Console.Write("Попробуйте ещё раз! ");
+                                guessing = true;
+                            }
+                            if (userResponse == correctAnswer)
+                            {
+                                Console.WriteLine("Вы верно отгадали загадку! Пароль: 1001001.");
+                                guessing = false;
+                            }
+                        }
+
+                        break;
+                    case commandRandomNumber:
+                        Random rand = new Random();
+                        randomNumber = rand.Next(minValueRandom, maxValueRandom);
+                        Console.WriteLine($"Ваше случайное число от 0 до 1000 - {randomNumber}.");
+                        break;
+                    case commandChangeColorText:
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        break;
+                    case commandExit:
+                        Console.WriteLine("Вы вышли из программы.");
+                        isWorking = false;
+                        break;
+                    default:
+                        Console.WriteLine("Вы ввели что-то не то. Попробуйте ввести заданые команды.");
+                        break;
+                }
+            }
+
+        }
