@@ -21,7 +21,7 @@
             {
                 Console.WriteLine($"{commandMultiplication} - разделить число.");
                 Console.WriteLine($"{commandPuzzle} - решите загадку и получите пароль.");
-                Console.WriteLine($"{commandRandomNumber} - вывести на экран рандомное число от 0 до 1000.");
+                Console.WriteLine($"{commandRandomNumber} - вывести на экран рандомное число от {minValueRandom} до {maxValueRandom}.");
                 Console.WriteLine($"{commandChangeColorText} - изменить цвет текста на синий.");
                 Console.WriteLine($"{commandExit} - выйти из программы.");
                 userInput = Console.ReadLine();
@@ -48,18 +48,18 @@
                                 Console.Write("Попробуйте ещё раз! ");
                                 guessing = true;
                             }
+                            
                             if (userResponse == correctAnswer)
                             {
                                 Console.WriteLine("Вы верно отгадали загадку! Пароль: dbs.");
                                 guessing = false;
                             }
                         }
-
                         break;
                     case commandRandomNumber:
                         Random rand = new Random();
                         randomNumber = rand.Next(minValueRandom, maxValueRandom);
-                        Console.WriteLine($"Ваше случайное число от 0 до 1000 - {randomNumber}.");
+                        Console.WriteLine($"Ваше случайное число от {minValueRandom} до {maxValueRandom} - {randomNumber}.");
                         break;
                     case commandChangeColorText:
                         Console.ForegroundColor = ConsoleColor.Blue;
