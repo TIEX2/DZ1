@@ -21,7 +21,7 @@
             {
                 Console.WriteLine($"{commandMultiplication} - разделить число.");
                 Console.WriteLine($"{commandPuzzle} - решите загадку и получите пароль.");
-                Console.WriteLine($"{commandRandomNumber} - вывести на экран рандомное число.");
+                Console.WriteLine($"{commandRandomNumber} - вывести на экран рандомное число от 0 до 1000.");
                 Console.WriteLine($"{commandChangeColorText} - изменить цвет текста на синий.");
                 Console.WriteLine($"{commandExit} - выйти из программы.");
                 userInput = Console.ReadLine();
