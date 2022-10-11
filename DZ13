@@ -50,7 +50,7 @@
                             }
                             if (userResponse == correctAnswer)
                             {
-                                Console.WriteLine("Вы верно отгадали загадку! Пароль: 1001001.");
+                                Console.WriteLine("Вы верно отгадали загадку! Пароль: dbs.");
                                 guessing = false;
                             }
                         }
