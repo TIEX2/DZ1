@@ -1,10 +1,10 @@
-        static void Main(string[] args)
+  static void Main(string[] args)
         {
-            const string commandMultiplication = "1";
-            const string commandPuzzle = "2";
-            const string commandRandomNumber = "3";
-            const string commandChangeColorText = "4";
-            const string commandExit = "5";
+            const string CommandMultiplication = "1";
+            const string CommandPuzzle = "2";
+            const string CommandRandomNumber = "3";
+            const string CommandChangeColorText = "4";
+            const string CommandExit = "5";
             float numberToDivide;
             float divider;
             float result;
@@ -19,16 +19,16 @@
 
             while (isWorking == true)
             {
-                Console.WriteLine($"{commandMultiplication} - разделить число.");
-                Console.WriteLine($"{commandPuzzle} - решите загадку и получите пароль.");
-                Console.WriteLine($"{commandRandomNumber} - вывести на экран рандомное число от {minValueRandom} до {maxValueRandom}.");
-                Console.WriteLine($"{commandChangeColorText} - изменить цвет текста на синий.");
-                Console.WriteLine($"{commandExit} - выйти из программы.");
+                Console.WriteLine($"{CommandMultiplication} - разделить число.");
+                Console.WriteLine($"{CommandPuzzle} - решите загадку и получите пароль.");
+                Console.WriteLine($"{CommandRandomNumber} - вывести на экран рандомное число от {minValueRandom} до {maxValueRandom}.");
+                Console.WriteLine($"{CommandChangeColorText} - изменить цвет текста на синий.");
+                Console.WriteLine($"{CommandExit} - выйти из программы.");
                 userInput = Console.ReadLine();
 
                 switch (userInput)
                 {
-                    case commandMultiplication:
+                    case CommandMultiplication:
                         Console.Write("Введите число, которое хотите поделить: ");
                         numberToDivide = Convert.ToSingle(Console.ReadLine());
                         Console.Write("Введите делитель: ");
@@ -36,8 +36,8 @@
                         result = numberToDivide / divider;
                         Console.WriteLine($"При делинии {numberToDivide} на {divider} вы получите - {result}.");
                         break;
-                    case commandPuzzle:
-                        
+                    case CommandPuzzle:
+
                         while (guessing == true)
                         {
                             Console.Write("Жидкое, а не вода, белое, а не снег. Ответ: ");
@@ -48,7 +48,7 @@
                                 Console.Write("Попробуйте ещё раз! ");
                                 guessing = true;
                             }
-                            
+
                             if (userResponse == correctAnswer)
                             {
                                 Console.WriteLine("Вы верно отгадали загадку! Пароль: dbs.");
@@ -56,15 +56,15 @@
                             }
                         }
                         break;
-                    case commandRandomNumber:
+                    case CommandRandomNumber:
                         Random rand = new Random();
                         randomNumber = rand.Next(minValueRandom, maxValueRandom);
                         Console.WriteLine($"Ваше случайное число от {minValueRandom} до {maxValueRandom} - {randomNumber}.");
                         break;
-                    case commandChangeColorText:
+                    case CommandChangeColorText:
                         Console.ForegroundColor = ConsoleColor.Blue;
                         break;
-                    case commandExit:
+                    case CommandExit:
                         Console.WriteLine("Вы вышли из программы.");
                         isWorking = false;
                         break;
