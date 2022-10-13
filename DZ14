@@ -1,0 +1,23 @@
+        static void Main(string[] args)
+        {
+            string name;
+            string symbol;
+            string topLine = "";
+            string bottomLine = "";
+            int additionalSymbol = 1;
+
+            Console.Write("Введите ваше имя: ");
+            name = Console.ReadLine();
+            Console.Write("Введите символ, из которого будет состоять прямоугольник: ");
+            symbol = Console.ReadLine();
+
+            for(int i = 0; i <= (name.Length + additionalSymbol); i++)
+            {
+                topLine += symbol;
+                bottomLine += symbol;
+            }
+
+            Console.WriteLine(topLine);
+            Console.WriteLine($"{symbol}{name}{symbol}");
+            Console.WriteLine(bottomLine);
+        }
