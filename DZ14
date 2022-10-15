@@ -2,22 +2,19 @@
         {
             string name;
             string symbol;
-            string topLine = "";
-            string bottomLine = "";
-            int additionalSymbol = 1;
+            string frame ="";
+            string lengthFrame;
 
             Console.Write("Введите ваше имя: ");
             name = Console.ReadLine();
             Console.Write("Введите символ, из которого будет состоять прямоугольник: ");
             symbol = Console.ReadLine();
+            lengthFrame = symbol + name + symbol;
 
-            for(int i = 0; i <= (name.Length + additionalSymbol); i++)
+            for(int i = 0; i < lengthFrame.Length; i++)
             {
-                topLine += symbol;
-                bottomLine += symbol;
+                frame += symbol;
             }
 
-            Console.WriteLine(topLine);
-            Console.WriteLine($"{symbol}{name}{symbol}");
-            Console.WriteLine(bottomLine);
+            Console.WriteLine($"{frame}\n{symbol}{name}{symbol}\n{frame}");
         }
