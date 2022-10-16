@@ -3,12 +3,12 @@
             string password = "StarWars";
             string secretMessenge = "May the Force be with you";
             int tryCount = 3;
-            int endTheProgram = 0;
+            int endProgram = 0;
             string userInput;
 
-            Console.WriteLine("Введите пароль, чтобы получить секретное сообщение! У вас всего 3 попытки.");
+            Console.WriteLine($"Введите пароль, чтобы получить секретное сообщение! У вас всего {tryCount} попытки.");
 
-            while(tryCount-- > endTheProgram)
+            for(int i = endProgram; i < tryCount; i++)
             {
                 Console.Write("Пароль: ");
                 userInput = Console.ReadLine();
@@ -20,12 +20,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("Неверный пароль. Попробуйте снова!");
+                    Console.WriteLine("Неверно. Попробуйте снова. ");
                 }
-            }
-
-            if(tryCount < endTheProgram)
-            {
-                Console.WriteLine("Количество попыток исчерпано!");
             }
         }
