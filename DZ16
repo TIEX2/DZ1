@@ -1,0 +1,22 @@
+        static void Main(string[] args)
+        {
+            int numberN;
+            int minValueRandom = 1;
+            int maxValueRandom = 28;
+            int minValueLoop = 100;
+            int maxValueLoop = 1000;
+            int startingPoint = 0;
+
+            Random random = new Random();
+            numberN = random.Next(minValueRandom, maxValueRandom);
+
+            Console.WriteLine($"Случайное число в диапазоне от {minValueRandom} до {maxValueRandom} ({maxValueRandom} - не учитывается) = {numberN}");
+
+            for(int i = startingPoint; i < maxValueLoop; i+= numberN)
+            {
+                if(i >= minValueLoop)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
