@@ -6,6 +6,7 @@
             int minValueLoop = 100;
             int maxValueLoop = 1000;
             int startingPoint = 0;
+            int multiplesOfN = 0;
 
             Random random = new Random();
             numberN = random.Next(minValueRandom, maxValueRandom);
@@ -14,9 +15,13 @@
 
             for(int i = startingPoint; i < maxValueLoop; i+= numberN)
             {
+
                 if(i >= minValueLoop)
                 {
                     Console.WriteLine(i);
+                    multiplesOfN++;
                 }
             }
+
+            Console.WriteLine($"Количество чисел кратных {numberN} = {multiplesOfN}");
         }
