@@ -1,6 +1,5 @@
         static void Main(string[] args)
         {
-
             int initialNumber = 2;
             int degree = 1;
             int multiplier = 2;
@@ -19,8 +18,7 @@
                     initialNumber *= multiplier;
                     degree++;
                 }
-
-                if(initialNumber > randomNumber)
+                else
                 {
                     Console.WriteLine($"Рандомное число = {randomNumber}.\nМинимальная степень двойки, чтобы превзойти рандомное число = {degree}.\nДвойка в степени {degree} = {initialNumber}.");
                     isWorking = false;
