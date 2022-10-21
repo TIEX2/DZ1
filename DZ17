@@ -1,0 +1,29 @@
+        static void Main(string[] args)
+        {
+
+            int initialNumber = 2;
+            int degree = 1;
+            int multiplier = 2;
+            int randomNumber;
+            int minValue = 1;
+            int maxValue = 100;
+            bool isWorking = true;
+
+            Random random = new Random();
+            randomNumber = random.Next(minValue, maxValue);
+
+            while (isWorking)
+            {
+                if(initialNumber <= randomNumber)
+                {
+                    initialNumber *= multiplier;
+                    degree++;
+                }
+
+                if(initialNumber > randomNumber)
+                {
+                    Console.WriteLine($"Рандомное число = {randomNumber}.\nМинимальная степень двойки, чтобы превзойти рандомное число = {degree}.\nДвойка в степени {degree} = {initialNumber}.");
+                    isWorking = false;
+                }
+            }
+        }
