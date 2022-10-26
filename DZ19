@@ -1,0 +1,87 @@
+static void Main(string[] args)
+        {
+            const string SworldStrike = "1";
+            const string FireBall = "2";
+            const string SummonAngel = "3";
+            const string HealAndArmour = "4";
+            const string AngelKick = "5";
+            int healthKnight = 100;
+            int fullHealthKnight = 100;
+            int healthWarlock = 150;
+            int death = 0;
+            int warlockDamange = 30;
+            int sworldDamange = 20;
+            int fireBallDamange = 15;
+            int noCriticalDamange = 1;
+            int maxCriticalDamange = 4;
+            int bloodSacrifice = 10;
+            int angelDamange = 50;
+            int heal = 10;
+            int godsArmour = 0;
+            string userInput;
+
+            Random rand = new Random();
+
+            while (healthKnight > death && healthWarlock > death)
+            {
+                Console.WriteLine($"Здоровье рыцаря {healthKnight}");
+                Console.WriteLine($"Здоровье чернокнижника {healthWarlock}");
+                Console.WriteLine($"{SworldStrike} - Удар мечом.\n{FireBall} - Огненный шар(шанс критического удара).\n{SummonAngel} - жертвует здоровьем, чтобы призвать ангела, который наносит удар в этом же ходе.\n{HealAndArmour} - Исцелить раны и призвать божественную броню на ход.(Если здоровье полное, то включается только броня)");
+                userInput = Console.ReadLine();
+
+                switch (userInput)
+                {
+                    case SworldStrike:
+                        healthWarlock -= sworldDamange;
+                        healthKnight -= warlockDamange;
+                        break;
+                    case FireBall:
+                        healthWarlock -= fireBallDamange * rand.Next(noCriticalDamange, maxCriticalDamange);
+                        healthKnight -= warlockDamange;
+                        break;
+                    case SummonAngel:
+                        healthKnight -= bloodSacrifice;
+                        Console.WriteLine($"Здоровье рыцаря {healthKnight}");
+                        Console.WriteLine($"{AngelKick} - ангел наносит удар и улетает.");
+                        userInput = Console.ReadLine();
+
+                        if (userInput == AngelKick)
+                        {
+                            healthWarlock -= angelDamange;
+                            healthKnight -= warlockDamange;
+                        }
+
+                        break;
+                    case HealAndArmour:
+                        if(healthKnight == fullHealthKnight)
+                        {
+                            healthKnight += godsArmour * warlockDamange;
+                        }
+                        else if(healthKnight < fullHealthKnight)
+                        {
+                            healthKnight += heal;
+                            healthKnight += godsArmour * warlockDamange;
+                        }
+
+                        break;
+                    default:
+                        {
+                            Console.WriteLine("Нет такого типа атаки!");
+                                break;
+                        }
+                }
+            }
+
+            if (healthKnight <= death && healthWarlock <= death)
+            {
+                Console.WriteLine("Рыцарь и босс погибли");
+            }
+            else if (healthKnight <= death)
+            {
+                Console.WriteLine("Чернокнижник победил, а рыцарь погиб");
+            }
+            else if (healthWarlock <= death)
+            {
+                Console.WriteLine("Рыцарь победил, а чернокнижник погиб");
+            }
+        }
