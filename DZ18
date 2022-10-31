@@ -1,0 +1,35 @@
+        static void Main(string[] args)
+        {
+            string text = "'('И')'";
+            char openBracket = '(';
+            char closeBracket = ')';
+            int startEnumeration = 0;
+            int bracketValue = 0;
+            int bracketDepth = 0;
+            int correctValue = 0;
+
+            for (int i = startEnumeration; i < text.Length; i++)
+            {
+                if (text[i] == openBracket)
+                {
+                    bracketValue++;
+                }
+                else if (text[i] == closeBracket)
+                {
+                    if(text[i] != openBracket)
+                    {
+                        bracketDepth++;
+                    }
+                    bracketValue--;
+                }
+            }
+
+            if (bracketValue == correctValue)
+            {
+                Console.WriteLine($"Строка: {text} - является корректным скобочным выражением. Максимальная глубина вложенности скобок = {bracketDepth} ");
+            }
+            else
+            {
+                Console.WriteLine("Некорректное скобочное выражение!");
+            }
+        }
