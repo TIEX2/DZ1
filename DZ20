@@ -1,0 +1,32 @@
+        static void Main(string[] args)
+        {
+            int sum = 0;
+            int product = 1;
+            int start = 0;
+            int rows = 0;
+            int columns = 1;
+            int colum = 0;
+            int row = 1;
+            int[,] matrix = { { 1, 9, 2 }, { 8, 7, 6 }, { 6, 3, 1 } };
+
+            for (int i = start; i < matrix.GetLength(rows); i++)
+            {
+                for (int j = start; j < matrix.GetLength(columns); j++)
+                {
+                    Console.Write(matrix[i,j] + " ");
+                    if (j == colum)
+                    {
+                        product *= matrix[i, j];
+                    }
+                    if (i == row)
+                    {
+                        sum += matrix[i,j];
+                    }
+                }
+
+                Console.WriteLine();
+            }
+
+            Console.WriteLine($"Произведение первого столбца = {product}");
+            Console.WriteLine($"Сумма второй строки = {sum}");
+        }
