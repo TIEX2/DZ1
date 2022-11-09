@@ -11,17 +11,14 @@
 
             for (int i = start; i < matrix.GetLength(rows); i++)
             {
+                sum += matrix[row, i];
+
                 for (int j = start; j < matrix.GetLength(columns); j++)
                 {
                     Console.Write(matrix[i, j] + " ");
                 }
 
                 Console.WriteLine();
-            }
-
-            for(int i = start; i < matrix.GetLength(rows); i++)
-            {
-                sum += matrix[row, i];
             }
 
             for (int i = start; i < matrix.GetLength(columns); i++)
